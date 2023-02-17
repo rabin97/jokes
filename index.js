@@ -12,7 +12,7 @@ const genretejokes = () => {
 
   fetch("https://icanhazdadjoke.com/", setHeader)
     .then((response) => response.json())
-    .then((data) => (joke.innerHTML = `${data.joke}`));
+    .then((data) => (joke.innerHTML = `${data.joke}`)).catch((err)=>{console.log(err)})
 };
 // joke.addEventListener
 jokebtn.addEventListener("click", genretejokes);
